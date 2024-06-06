@@ -1,5 +1,4 @@
 from django.contrib import admin
-from .models import Ingredient
-
-admin.site.register(Ingredient)
+from .models import Yummy
+admin.site.register(Yummy)
 

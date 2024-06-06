@@ -21,6 +21,7 @@ from .views import AllRecipes
 from .views import Cookpad
 from .views import Tasty
 from .views import Yummly
+from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',index, name= 'index'),
@@ -29,4 +30,6 @@ urlpatterns = [
     path('Tasty/',Tasty,name='Tasty'),
     path('Yummly/',Yummly,name='Yummly'),
     path('accounts/', include('accounts.urls')),
+    path('forms/', views.forms, name='forms'),
+     path('AllRecipes/', include('AllRecipes.urls')),
 ]

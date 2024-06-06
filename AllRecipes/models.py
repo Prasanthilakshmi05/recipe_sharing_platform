@@ -1,7 +1,9 @@
 from django.db import models
-class User(models.Model):
-    bio = models.TextField(blank=True)
-    
+
+class Recipe(models.Model):
+    bio = models.CharField(max_length=100)
+    # Other fields...
+
     def __str__(self):
-        return self.username
+        return f"{self.bio}"  # Adjust this line as necessary
 
